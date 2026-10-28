@@ -42,9 +42,8 @@
   .btn{display:inline-block;text-decoration:none;border-radius:999px;padding:13px 26px;font-size:16px}
   .btn.main{background:var(--terra);color:var(--card)}
   .btn.sub{background:var(--card);color:var(--terra);border:1.5px solid var(--terra-l)}
-  .phones{display:flex;gap:16px;justify-content:center}
-  .phones img{width:46%;max-width:210px;border-radius:22px;box-shadow:0 18px 40px rgba(150,100,70,.22)}
-  .phones img:last-child{margin-top:36px}
+  .phones{display:flex;gap:16px;justify-content:center;align-items:flex-start}
+  .phones img{width:46%;max-width:210px;height:auto;aspect-ratio:9/16;object-fit:cover;border-radius:22px;box-shadow:0 18px 40px rgba(150,100,70,.22)}
 
   /* cards */
   .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
@@ -86,6 +85,11 @@
   details p{color:var(--body);margin:10px 0 0}
   details img{max-width:100%;border-radius:12px;margin-top:10px}
 
+  .watch{display:grid;grid-template-columns:1fr 320px;gap:40px;align-items:center}
+  .watch video{width:100%;max-width:320px;aspect-ratio:9/16;border-radius:26px;background:#F3E3D3;box-shadow:0 20px 48px rgba(150,100,70,.25);display:block;margin:0 auto}
+  .watch ol{margin:0;padding-left:22px;color:var(--body)}
+  .watch ol li{margin-bottom:6px}
+  @media (max-width:760px){.watch{grid-template-columns:1fr}}
   footer{background:var(--terra);color:var(--card);padding:48px 0;text-align:center}
   footer h2{color:var(--card);margin-bottom:10px}
   footer p{margin:6px 0;color:#FBE3D6}
@@ -200,6 +204,25 @@
     <details><summary>사진이 옆으로 누워서 나오지 않나요?</summary><p>휴대폰 사진은 회전 정보만 따로 들고 있어서 인화 사이트에서 누울 때가 있어요. 그래서 Claude가 올리기 전에 사진을 실제로 세워서 따로 저장해 둬요.</p></details>
     <details><summary>"주문하기"가 막혔다고 나와요</summary><p>Claude의 안전장치가 결제로 이어질 수 있는 버튼을 막은 거예요. 열려 있는 포토몬 편집기에서 <b>주문하기</b>를 직접 누르면 장바구니에 담겨요.</p></details>
     <details><summary>Claude 무료 버전으로도 되나요?</summary><p>아쉽지만 안 돼요. 예약 작업과 Code 탭이 되는 유료 요금제(Pro 이상)와 컴퓨터가 필요해요.</p></details>
+  </div>
+</section>
+
+<section class="alt" id="watch">
+  <div class="wrap watch">
+    <div>
+      <span class="eyebrow">실제 화면으로 보기</span>
+      <h2>엄마 손 0번,<br>Claude가 혼자 해요</h2>
+      <p class="lead">2026년 10월, 우리 집 컴퓨터에서 실제로 있었던 일이에요. 엄마는 하트만 눌러뒀어요.</p>
+      <ol>
+        <li>iCloud 즐겨찾기에서 하트 사진 찾기</li>
+        <li>사진마다 촬영 날짜 확인</li>
+        <li>내 컴퓨터로 내려받기</li>
+        <li>누운 사진 바로 세우기</li>
+        <li>포토몬 폴라로이드 11칸 채우기</li>
+        <li>장바구니에 쏙 담고 "결제만 해주세요 ♡" 알림</li>
+      </ol>
+    </div>
+    <video src="video/claude-auto.mp4" poster="video/claude-auto.jpg" controls playsinline muted loop preload="metadata" aria-label="Claude가 iCloud에서 하트 사진을 모아 포토몬 장바구니에 담는 실제 작업 화면"></video>
   </div>
 </section>
 
